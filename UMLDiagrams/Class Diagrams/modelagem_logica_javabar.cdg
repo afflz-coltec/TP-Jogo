@@ -2,7 +2,7 @@
 
 <ClassDiagram name="modelagem_javabar">
   <ClassDiagramComponents>
-    <Class name="bar" package="" visibility="public" xPosition="62.0" yPosition="49.0">
+    <Class name="bar" package="" visibility="public" xPosition="392.0" yPosition="88.0">
       <Fields/>
       <Constructors/>
       <Methods/>
@@ -17,54 +17,54 @@
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="estoque" package="" visibility="public" xPosition="413.0" yPosition="132.0">
+    <Class name="estoque" package="" visibility="public" xPosition="772.0" yPosition="144.0">
       <Fields/>
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="mesa" package="" visibility="public" xPosition="43.0" yPosition="173.0">
+    <Class name="mesa" package="" visibility="public" xPosition="43.0" yPosition="107.0">
       <Fields/>
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="fornecedor" package="" visibility="public" xPosition="634.0" yPosition="25.0">
+    <Class name="fornecedor" package="" visibility="public" xPosition="757.0" yPosition="5.0">
       <Fields/>
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="gostos" package="" visibility="public" xPosition="27.0" yPosition="506.0">
+    <Class name="gostos" package="" visibility="public" xPosition="43.0" yPosition="506.0">
       <Fields/>
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="proutos" package="" visibility="public" xPosition="742.0" yPosition="299.0">
+    <Class name="proutos" package="" visibility="public" xPosition="772.0" yPosition="299.0">
       <Fields/>
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="preços" package="" visibility="public" xPosition="513.0" yPosition="299.0">
+    <Class name="preços" package="" visibility="public" xPosition="511.0" yPosition="299.0">
       <Fields/>
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="finanças" package="" visibility="public" xPosition="255.0" yPosition="288.0">
+    <Class name="finanças" package="" visibility="public" xPosition="274.0" yPosition="299.0">
       <Fields/>
       <Constructors/>
       <Methods/>
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <HasRelation name="possui" source="clientes" target="gostos" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
-    <HasRelation name="armazena" source="estoque" target="proutos" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
-    <HasRelation name="abriga" source="mesa" target="clientes" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
     <HasRelation name="abastece" source="fornecedor" target="estoque" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
     <HasRelation name="avaliam" source="finanças" target="preços" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="tem" source="bar" target="estoque" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="possui" source="clientes" target="gostos" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="abriga" source="mesa" target="clientes" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="mantem" source="clientes" target="finanças" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="abrange" source="gostos" target="bebidas" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
     <HasRelation name="comercializa-se" source="bebidas" target="proutos" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
     <HasRelation name="vendem-se a" source="proutos" target="preços" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
-    <HasRelation name="tem" source="bar" target="estoque" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
-    <HasRelation name="mantem" source="clientes" target="finanças" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
-    <HasRelation name="opera" source="bar" target="mesa" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
     <HasRelation name="pussui" source="bar" target="fornecedor" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
-    <HasRelation name="abrange" source="gostos" target="bebidas" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
+    <HasRelation name="armazena" source="estoque" target="proutos" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="opera" source="bar" target="mesa" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
   </ClassDiagramRelations>
 </ClassDiagram>

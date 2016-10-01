@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="modelagem_funcional">
+  <ClassDiagramComponents>
+    <Class name="GUI" package="" visibility="public" xPosition="15.0" yPosition="27.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="negocios" package="" visibility="public" xPosition="15.0" yPosition="146.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="banco de dados" package="" visibility="public" xPosition="395.0" yPosition="272.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="socket_server" package="" visibility="public" xPosition="395.0" yPosition="146.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="persistencia" package="" visibility="public" xPosition="15.0" yPosition="272.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="intercom" package="" visibility="public" xPosition="212.0" yPosition="146.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="visual" source="negocios" target="GUI" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="comunica" source="intercom" target="socket_server" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="multiplayer" source="negocios" target="intercom" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="armazena" source="persistencia" target="banco de dados" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="algoritimo evolutivo" source="negocios" target="persistencia" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
